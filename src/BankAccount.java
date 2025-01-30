@@ -1,15 +1,12 @@
+import java.text.DecimalFormat;
+
 public class BankAccount
 {
     public static void main (String[] args)
     {
+        DecimalFormat DollarsNCents = new DecimalFormat("0.00");
         float bobBalance = 2175.37f;
-        // bobBalance = bobBalance - 302.50f;
-        // bobBalance = bobBalance + 50.03f;
-        // bobBalance = bobBalance/2 + 20.00f;
-        // bobBalance--;
-        // bobBalance = bobBalance * 2;
-        // bobBalance++;
-
+        
         bobBalance -= 302.50f;
         bobBalance += 50.03f;
         bobBalance /= 2; 
@@ -18,6 +15,8 @@ public class BankAccount
         bobBalance *= 2;
         bobBalance++;
 
-        System.out.println(bobBalance);
+        System.out.println("$" + DollarsNCents.format(bobBalance));
+
+
     }
 }
